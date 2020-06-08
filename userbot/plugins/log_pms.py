@@ -34,7 +34,7 @@ async def approve_p_m(event):
     chat = await event.get_chat()
     if Config.NC_LOG_P_M_S:
         if event.is_private:
-            if chat.id not in borg.storage.NO_PM_LOG_USERS:
+            if chat.id not in borg.storage.NO_PM_LOG_USERS: True
                 NO_PM_LOG_USERS.append(chat.id)
                 await event.edit("Won't Log Messages from this chat")
                 await asyncio.sleep(3)
