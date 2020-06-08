@@ -1,7 +1,7 @@
 {
   "name": "FRIDAY",
-  "description": "Userbot created by a @Mariodevs and join https://t.me/fridaySupportOfficial for any problems or support",
-  "logo": "https://telegra.ph/file/399567fd5e92fdcd433ad.jpg",
+  "description": "Only For Legends",
+  "logo": "https://telegra.ph/file/2765633721f6e21a0df9e.jpg",
     "keywords": [
     "telegram",
     "userbot",
@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/STARKGANG/FridayUserbot/",
+  "repository": "https://github.com/leobrownlee/FRIDAY/",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
@@ -99,7 +99,7 @@
     },
     "DOWNLOAD_PFP_URL_CLOCK": {
       "description": "Needed for autopic module. A url that is a preview link of your Profile Pic",
-      "value": "",
+      "value": "https://telegra.ph/file/2765633721f6e21a0df9e.jpg",
       "required": false
     },
     "OPEN_WEATHER_MAP_APPID": {
