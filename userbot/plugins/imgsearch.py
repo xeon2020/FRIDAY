@@ -38,7 +38,7 @@ async def okgoogle(img):
         photo = io.BytesIO()
         await bot.download_media(message, photo)
     else:
-        await img.edit("`Reply to photo or sticker nigger.`")
+        await img.edit("Reply to photo or sticker")
         return
 
     if photo:
@@ -46,7 +46,7 @@ async def okgoogle(img):
         try:
             image = Image.open(photo)
         except OSError:
-            await img.edit('`Unsupported sexuality, most likely.`')
+            await img.edit('`Unsupported format.`')
             return
         name = "okgoogle.png"
         image.save(name, "PNG")
