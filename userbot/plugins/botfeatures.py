@@ -22,7 +22,7 @@ async def _(event):
               await event.client.forward_messages(chat, reply_message)
               response = await response 
           except YouBlockedUserError: 
-              await event.reply("```Please unblock me (@FiletolinkTGbot) u Nigga```")
+              await event.reply("Please unblock me @FiletolinkTGbot")
               return
           await event.delete()
           await event.client.send_message(event.chat_id, response.message, reply_to=reply_message)
@@ -47,7 +47,7 @@ async def _(event):
               await event.client.forward_messages(chat, reply_message)
               response = await response 
           except YouBlockedUserError: 
-              await event.reply("```Please unblock me (@SangMataInfo_bot) u Nigga```")
+              await event.reply("Please unblock me @SangMataInfo_bot")
               return
           await event.delete()
           await event.client.send_message(event.chat_id, response.message, reply_to=reply_message)
@@ -72,7 +72,7 @@ async def _(event):
               await event.client.forward_messages(chat, reply_message)
               response = await response 
           except YouBlockedUserError: 
-              await event.reply("```Please unblock me (@chotamreaderbot) u Nigga```")
+              await event.reply("Please unblock me @chotamreaderbot")
               return
           await event.delete()
           await event.client.send_message(event.chat_id, response.message, reply_to=reply_message)
