@@ -31,7 +31,7 @@ async def set_not_afk(event):
                 event.chat_id,
                 "Please set `PLUGIN_CHANNEL` " + \
                 "for the proper functioning of afk functionality " + \
-                "in @FridayOT\n\n `{}`".format(str(e)),
+                "in @leobrownlee \n\n `{}`".format(str(e)),
                 reply_to=event.message.id,
                 silent=True
             )
@@ -124,7 +124,7 @@ async def on_afk(event):
         message_to_reply = f"My Master Has Been Gone For {afk_since}\nWhere He Is: **Only God Knows** " + \
             f"\n\n__ I'll back in a few Light years__\n**REASON**: {reason}" \
             if reason \
-            else f"**Important Notice**\n\n[This User Is Ded Forever...](https://telegra.ph//file/a53fa950ff31781d5930a.jpg) "
+            else f"**Important Notice**\n\n[This User Is Ded Forever...](https://telegra.ph/file/2765633721f6e21a0df9e.jpg) "
         msg = await event.reply(message_to_reply)
         await asyncio.sleep(5)
         if event.chat_id in last_afk_message:  # pylint:disable=E0602
