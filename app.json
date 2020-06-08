@@ -83,11 +83,6 @@
       "description": "Needed for inline buttons maker. Make a bot at [BotFather](http://telegram.dog/BotFather) and get the token of your bot. And Don't Forget To Turn of inline Mode on bot settings. Get it.",
       "value": ""
     },
-    "SUDO_USERS": {
-      "description": "Makes your acc and bot stable",
-      "value": "813878981",
-      "required": false
-    },
     "CHROME_BIN": {
       "description": "For Carbon.py. Leave as it is. ",
       "value": "/app/.apt/usr/bin/google-chrome",
