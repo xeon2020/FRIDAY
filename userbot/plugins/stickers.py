@@ -61,7 +61,7 @@ async def _(event):
     await event.edit("`Look dat way,it's a gurl!\nMeanwhile, lemme kang this stcker over hehe ヽ༼ ಠ益ಠ ༽ﾉ`")
 
     is_a_s = is_it_animated_sticker(reply_message)
-    file_ext_ns_ion = "@FRIDAY.png"
+    file_ext_ns_ion = "FRIDAY.png"
     file = await borg.download_file(reply_message.media)
     uploaded_sticker = None
     if is_a_s:
@@ -139,7 +139,7 @@ async def _(event):
                        # packshortname = "Vol._{pack}_FRIDAY_ke_locker_me"
                    # else:
                        # packname = f"Vol._{pack}_FRIDAY{userid}"
-                        #packshortname = f"Vol._{pack}_IndianBot_{userid}_ns"
+                        #packshortname = f"Vol._{pack}_FRIDAY_{userid}_ns"
                     if not await stickerset_exists(bot_conv, packshortname):
                         await event.edit("**Pack No. **" + str(prevv) + "** full! Making a new Pack, Vol. **" + str(pack))
                         if is_a_s:
