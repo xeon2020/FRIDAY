@@ -108,7 +108,7 @@
     },
     "TZ": {
       "description": "Required for Correct Time for autopic get from http://www.timezoneconverter.com/cgi-bin/findzone.tzc",
-      "value": "",
+      "value": "Asia/Kolkata",
       "required": false
     }
   },
