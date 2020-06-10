@@ -9,7 +9,7 @@ from uniborg.util import admin_cmd
 import asyncio
 from time import sleep
 
-COLLECTION_STRING = [
+COLLECTION_STRINGZ = [
   "hacker-background"
 ]
 
