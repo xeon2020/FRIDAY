@@ -17,7 +17,7 @@ from time import sleep
 COLLECTION_STRINGZ = [
 
   "World-War-Ii-Wallpaper",
-  "Wwii Fighter Planes Wallpapers 1920x1080"
+  "Wwii-Fighter-Planes-Wallpapers-1080p"
 
 ]
 
