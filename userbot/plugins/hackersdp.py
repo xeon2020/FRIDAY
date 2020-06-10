@@ -15,8 +15,8 @@ COLLECTION_STRINGZ = [
 
 async def animepp():
     os.system("rm -rf donot.jpg")
-    rnd = random.randint(0, len(COLLECTION_STRING) - 1)
-    pack = COLLECTION_STRING[rnd]
+    rnd = random.randint(0, len(COLLECTION_STRINGZ) - 1)
+    pack = COLLECTION_STRINGZ[rnd]
     pc = requests.get("http://getwallpapers.com/collection/" + pack).text
     f = re.compile('/\w+/full.+.jpg')
     f = f.findall(pc)
