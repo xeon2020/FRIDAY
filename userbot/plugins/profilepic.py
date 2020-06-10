@@ -16,15 +16,8 @@ from time import sleep
 
 COLLECTION_STRINGZ = [
 
-  "star-wars-wallpaper-1080p",
-
-  "4k-sci-fi-wallpaper",
-
-  "star-wars-iphone-6-wallpaper",
-
-  "kylo-ren-wallpaper",
-
-  "darth-vader-wallpaper"
+  "World-War-Ii-Wallpaper",
+  "Wwii Fighter Planes Wallpapers 1920x1080"
 
 ]
 
@@ -52,11 +45,11 @@ async def animepp():
 
     urllib.request.urlretrieve(fy,"donottouch.jpg")
 
-@borg.on(admin_cmd(pattern="gamerdp ?(.*)"))
+@borg.on(admin_cmd(pattern="profile ?(.*)"))
 
 async def main(event):
 
-    await event.edit("**Starting Gamer Profile Pic...\n\nDone !!! Check Your DP") #Owner MarioDevs
+    await event.edit("**Starting  Profile Pic...\n\nDone !!! Check Your DP") 
 
     while True:
 
@@ -68,4 +61,4 @@ async def main(event):
 
         os.system("rm -rf donottouch.jpg")
 
-        await asyncio.sleep(3600) #Edit this to your required needs
+        await asyncio.sleep(60) #Edit this to your required needs
