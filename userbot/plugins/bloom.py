@@ -55,7 +55,7 @@ async def autopic(event):
         current_time = datetime.now().strftime("\n\n Time: %H:%M:%S \n \n Date: %d/%m/%y")
         img = Image.open(photo)
         drawn_text = ImageDraw.Draw(img)
-        fnt = ImageFont.truetype(FONT_FILE_TO_USE, 20)
+        fnt = ImageFont.truetype(FONT_FILE_TO_USE, 30)
         ofnt = ImageFont.truetype(FONT_FILE_TO_USE, 250)
         drawn_text.text((200, 400), current_time, font=fnt, fill=(FR,FG,FB))
         drawn_text.text((250, 250), "  😎", font = ofnt, fill=(FR,FG,FB))
