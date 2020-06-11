@@ -52,6 +52,10 @@
       "description": "Create a private group add rose bot then type /id. PLUGIN_CHANNEL and PRIVATE_GROUP_ID both values should be same",
       "value": ""
     },
+    "PM_LOGGR_BOT_API_ID": {
+       "description": "for login private messages create a private channel and do .get_id and add that id", 
+       "value": ""
+    }, 
     "STRING_SESSION": {
       "description": "Get this value from https://fridayuserbot.midhunkm1294bit.repl.run",
       "value": ""
