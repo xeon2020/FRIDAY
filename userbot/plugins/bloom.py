@@ -2,7 +2,7 @@
 Time In Profile Pic.....
 Command: `.bloom`
 
-Hmmmm U need to config RAVANA_LEELA var in Heroku with any telegraph image link
+
 
 :::::Credit Time::::::
 1) Coded By: @s_n_a_p_s
@@ -66,6 +66,6 @@ async def autopic(event):
                 file
             ))
             os.remove(photo)
-            await asyncio.sleep(20)
+            await asyncio.sleep(60)
         except:
             return
