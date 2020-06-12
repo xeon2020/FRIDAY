@@ -1,5 +1,5 @@
 """Get Telegram User Information
-Syntax: .wh @username/userid"""
+Syntax: .whois @username/userid"""
 
 
 
@@ -11,7 +11,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 
 
-from uniborg.util import admin_cmd
+from userbot.utils import admin_cmd
 
 TMP_DOWNLOAD_DIRECTORY = "./"
 
