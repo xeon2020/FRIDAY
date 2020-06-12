@@ -27,7 +27,7 @@ async def repcf(event):
     except Exception as e:
         await event.edit(str(e))
 
-@command(pattern="^.addcf", outgoing=True)
+@command(pattern="^.eai", outgoing=True)
 async def addcf(event):
     if event.fwd_from:
         return
@@ -44,7 +44,7 @@ async def addcf(event):
     else:
         await event.edit("Reply to a user to activate Lydia AI on them")
 
-@command(pattern="^.remcf", outgoing=True)
+@command(pattern="^.dai", outgoing=True)
 async def remcf(event):
     if event.fwd_from:
         return
