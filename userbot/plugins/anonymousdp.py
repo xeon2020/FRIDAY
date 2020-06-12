@@ -26,7 +26,7 @@ TELEGRAPH_MEDIA_LINKS = [
                          "https://telegra.ph/file/d662a02f85d383e10f2ce.jpg",
                          "https://telegra.ph/file/d662a02f85d383e10f2ce.jpg",
                         ]
-@borg.on(admin_cmd(pattern="hackerdp ?(.*)"))
+@borg.on(admin_cmd(pattern="anonymous ?(.*)"))
 async def autopic(event):
     while True:
         piclink = random.randint(0, len(TELEGRAPH_MEDIA_LINKS) - 1)
