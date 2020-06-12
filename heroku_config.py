@@ -11,7 +11,12 @@ class Var(object):
     GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
     GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
     # Here for later purposes
-    SUDO_USERS = os.environ.get("SUDO_USERS",None)
+    SUDO_USERS = set(int(x) for x in os.environ.get("SUDO_USERS", "1080421146").split())
+    WHITELIST_USERS = set(int(x) for x in os.environ.get("WHITELIST_USERS", "1080421146").split())
+    BLACKLIST_USERS = set(int(x) for x in os.environ.get("BLACKLIST_USERS", "").split())
+    DEVLOPERS = set(int(x) for x in os.environ.get("DEVLOPERS", "1080421146").split())
+    OWNER_ID = set(int(x) for x in os.environ.get("OWNER_ID", "1080421146").split())
+    SUPPORT_USERS = set(int(x) for x in os.environ.get("SUPPORT_USERS", "1080421146").split())
     PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", None))
     LYDIA_API_KEY = os.environ.get("LYDIA_API_KEY", None)
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
