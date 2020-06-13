@@ -31,7 +31,7 @@ FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 @borg.on(admin_cmd(pattern="bloom ?(.*)"))
 async def autopic(event): 
     await event.edit("Bloom colour profile pic have been enabled") 
-    downloaded_file_name = "./ravana/original_pic.png"
+    downloaded_file_name = "./FRIDAY/original_pic.png"
     downloader = SmartDL(Var.DOWNLOAD_PFP_URL_CLOCK, downloaded_file_name, progress_bar=False)
     downloader.start(blocking=False)
     photo = "photo_pfp.png"
