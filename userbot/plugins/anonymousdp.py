@@ -26,7 +26,7 @@ TELEGRAPH_MEDIA_LINKS = [
                          "https://telegra.ph/file/d662a02f85d383e10f2ce.jpg",
                          "https://telegra.ph/file/d662a02f85d383e10f2ce.jpg",
                         ]
-@borg.on(admin_cmd(pattern="anonymous ?(.*)"))
+@borg.on(admin_cmd(pattern="anonymousdp ?(.*)"))
 async def autopic(event):
     while True:
         piclink = random.randint(0, len(TELEGRAPH_MEDIA_LINKS) - 1)
@@ -54,6 +54,6 @@ async def autopic(event):
             ))
             os.remove(photo)
             
-            await asyncio.sleep(60)
+            await asyncio.sleep(20)
         except:
             return
