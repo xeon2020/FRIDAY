@@ -1,5 +1,5 @@
 """ Sing a Malayalam song... 
-    Command .malayalamsongs
+    Command .malsongs
     By @Deonnn """
 
 
@@ -18,7 +18,7 @@ import random
 
 
 
-@borg.on(events.NewMessage(pattern=r"\.malayalamsongs", outgoing=True))
+@borg.on(events.NewMessage(pattern=r"\.malsongs", outgoing=True))
 
 async def _(event):
 
