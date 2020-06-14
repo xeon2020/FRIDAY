@@ -1,5 +1,5 @@
 """File Converter
-.convert """
+.convert mp3 """
 
 import asyncio
 import os
