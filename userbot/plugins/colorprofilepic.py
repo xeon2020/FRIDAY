@@ -1,38 +1,4 @@
-"""
 
-Color Profile Pic.....
-
-Command: `.cpp`
-
-
-
-
-
-
-
-:::::Credit Time::::::
-
-1) Coded By: @s_n_a_p_s
-
-2) Ported By: @r4v4n4 (Noodz Lober)
-
-3) End Game Help By: @spechide
-
-4) Better Colour Profile Pic By @PhycoNinja13b
-
-
-
-#curse: who ever edits this credit section will goto hell
-
-
-
-â ï¸DISCLAIMERâ ï¸
-
-
-
-USING THIS PLUGIN CAN RESULT IN ACCOUNT BAN. WE DONT CARE ABOUT BAN, SO WE ARR USING THIS.
-
-"""
 
 import os
 
@@ -46,7 +12,7 @@ from telethon.tl import functions
 
 from userbot import ALIVE_NAME
 
-from uniborg.util import admin_cmd
+from userbot.utils import admin_cmd
 
 import asyncio
 
