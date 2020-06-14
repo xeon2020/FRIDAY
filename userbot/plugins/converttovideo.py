@@ -15,7 +15,7 @@ from telethon.tl.types import *
 
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
-from sample_config import Config
+
 from userbot.utils import *
 from userbot.utils import admin_cmd, humanbytes, progress, time_formatter
 import logging
