@@ -1,27 +1,10 @@
-"""
-Time In Profile Pic.....
-Command: `.bloom`
 
-
-
-:::::Credit Time::::::
-1) Coded By: @s_n_a_p_s
-2) Ported By: @r4v4n4 (Noodz Lober)
-3) End Game Help By: @spechide
-4) Better Colour Profile Pic By @PhycoNinja13b
-
-#curse: who ever edits this credit section will goto hell
-
-⚠️DISCLAIMER⚠️
-
-USING THIS PLUGIN CAN RESULT IN ACCOUNT BAN. WE DONT CARE ABOUT BAN, SO WE ARR USING THIS.
-"""
 import os
 from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
 from pySmartDL import SmartDL
 from telethon.tl import functions
-from uniborg.util import admin_cmd
+from userbot.utils import admin_cmd
 import asyncio
 import shutil 
 import random
