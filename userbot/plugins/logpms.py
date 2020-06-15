@@ -22,7 +22,7 @@ from userbot.uniborgConfig import Config
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.WARN)
 
-NO_PM_LOG_USERS = []
+NC_PM_LOG_USERS = []
 
 BOTLOG = True
 BOTLOG_CHATID = Config.PRIVATE_GROUP_BOT_API_ID
