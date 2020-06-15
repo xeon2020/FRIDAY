@@ -59,9 +59,9 @@ async def kickme(leave):
 @borg.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
 async def monito_p_m_s(event):
     sender = await event.get_sender()
-    if Config.NO_LOG_P_M_S and not sender.bot:
+    if Config.NC_LOG_P_M_S and not sender.bot:
         chat = await event.get_chat()
-        if chat.id not in NO_PM_LOG_USERS and chat.id != borg.uid:
+        if chat.id not in NC_PM_LOG_USERS and chat.id != borg.uid:
             try:
                 e = await borg.get_entity(int(Config.PM_LOGGR_BOT_API_ID))             
                 fwd_message = await borg.forward_messages(
@@ -82,8 +82,8 @@ async def set_no_log_p_m(event):
         reason = event.pattern_match.group(1)
         chat = await event.get_chat()
         if event.is_private:
-            if chat.id in NO_PM_LOG_USERS:
-                NO_PM_LOG_USERS.remove(chat.id)
+            if chat.id in NC_PM_LOG_USERS:
+                NC_PM_LOG_USERS.remove(chat.id)
                 await event.edit("Will Log Messages from this chat")
                 await asyncio.sleep(3)
                 await event.delete()
@@ -95,8 +95,8 @@ async def set_no_log_p_m(event):
         reason = event.pattern_match.group(1)
         chat = await event.get_chat()
         if event.is_private:
-            if chat.id not in NO_PM_LOG_USERS:
-                NO_PM_LOG_USERS.append(chat.id)
+            if chat.id not in NC_PM_LOG_USERS:
+                NC_PM_LOG_USERS.append(chat.id)
                 await event.edit("Won't Log Messages from this chat")
                 await asyncio.sleep(3)
                 await event.delete()
