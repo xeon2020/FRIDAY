@@ -16,7 +16,7 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 # https://stackoverflow.com/a/37631799/4723940
 from PIL import Image
-from heroku_config import Config
+from heroku_config import class
 from userbot.utils import *
 from userbot.utils import admin_cmd, humanbytes, progress, time_formatter
 import logging
