@@ -1,7 +1,7 @@
 """Download Files to your local server
 Syntax:
-.download
-.download url | file.name to download files from a Public Link"""
+.dwl
+.dwl url | file.name to download files from a Public Link"""
 
 import aiohttp
 import asyncio
@@ -12,10 +12,10 @@ from datetime import datetime
 from pySmartDL import SmartDL
 from telethon import events
 from telethon.tl.types import DocumentAttributeVideo
-from uniborg.util import admin_cmd, humanbytes, progress, time_formatter
+from userbot.utils import admin_cmd, humanbytes, progress, time_formatter
 
 
-@borg.on(admin_cmd(pattern="download ?(.*)", allow_sudo=True))
+@borg.on(admin_cmd(pattern="dwl ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -53,28 +53,23 @@ async def _(event):
         downloaded_file_name = os.path.join(to_download_directory, file_name)
         downloader = SmartDL(url, downloaded_file_name, progress_bar=False)
         downloader.start(blocking=False)
-        display_message = ""
         c_time = time.time()
         while not downloader.isFinished():
             total_length = downloader.filesize if downloader.filesize else None
             downloaded = downloader.get_dl_size()
+            display_message = ""
             now = time.time()
             diff = now - c_time
             percentage = downloader.get_progress() * 100
             speed = downloader.get_speed()
             elapsed_time = round(diff) * 1000
-            progress_str = "[{0}{1}]\nProgress: {2}%".format(
+            progress_str = "{0}{1}\nProgress: {2}%".format(
                 ''.join(["█" for i in range(math.floor(percentage / 5))]),
                 ''.join(["░" for i in range(20 - math.floor(percentage / 5))]),
                 round(percentage, 2))
             estimated_total_time = downloader.get_eta(human=True)
             try:
-                current_message = f"trying to download\n"
-                current_message += f"URL: {url}\n"
-                current_message += f"File Name: {file_name}\n"
-                current_message += f"{progress_str}\n"
-                current_message += f"{humanbytes(downloaded)} of {humanbytes(total_length)}\n"
-                current_message += f"ETA: {estimated_total_time}"
+                current_message = f"trying to download\nURL: {url}\nFile Name: {file_name}\n{progress_str}\n{humanbytes(downloaded)} of {humanbytes(total_length)}\nETA: {estimated_total_time}"
                 if round(diff % 10.00) == 0 and current_message != display_message:
                     await mone.edit(current_message)
                     display_message = current_message
