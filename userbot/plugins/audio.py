@@ -1,9 +1,9 @@
 
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from userbot.utils import admin_cmd
+from uniborg.util import admin_cmd
 
-@borg.on(admin_cmd(pattern="au ?(.*)"))
+@borg.on(admin_cmd(pattern="ad ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return 
@@ -14,7 +14,7 @@ async def _(event):
     if not reply_message.media:
        await event.edit("```reply to media message```")
        return
-    chat = "@AudioTubeBot"
+    chat = "@dwnmp3Bot"
     sender = reply_message.sender
     if reply_message.sender.bot:
        await event.edit("```Reply to actual users message.```")
@@ -28,9 +28,5 @@ async def _(event):
           except YouBlockedUserError: 
               await event.reply("```Please unblock @AudioTubeBot and try again```")
               return
-          if response.message.media is None:
-              med = conv.wait_event(events.NewMessage(incoming=True,from_users=507379365))
-              med = await med
-              await borg.send_file(event.chat_id, med.message.media)
-          else:
-              await borg.send_file(event.chat_id, response.message.media)
+          await event.delete()
+          await borg.send_file(event.chat_id, response.message.media)
