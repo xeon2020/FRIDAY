@@ -12,7 +12,7 @@ from telethon.errors import FloodWaitError
 from userbot.utils import admin_cmd
 
 
-DEL_TIME_OUT = 120
+DEL_TIME_OUT = 300
 
 
 @borg.on(admin_cmd(pattern="autobio"))  # pylint:disable=E0602
@@ -22,7 +22,7 @@ async def _(event):
     while True:
         DMY = time.strftime("%d.%m.%Y")
         HM = time.strftime("%H:%M:%S")
-        bio = f"📅 {DMY} | 👨‍💻 | ⌚️ {HM}"
+        bio = f"📅 {DMY} |  👨‍💻  | ⌚️ {HM}"
         logger.info(bio)
         try:
             await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
