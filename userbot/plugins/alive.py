@@ -21,7 +21,7 @@ async def amireallyalive(alive):
                      "`☞Database Status: Databases functioning normally!\n\n`"
                      "`☞Always with you, my master!\n`"
                      f"`☞Owner Name`: [{DEFAULTUSER}](t.me/leobrownlee)\n"
-                     "☞[Deploy this userbot Now](https://github.com/leobrownlee/FRIDAY)"
+                     "☞[DEPLOY FRIDAY](https://github.com/leobrownlee/FRIDAY)"
                     )
 
     
