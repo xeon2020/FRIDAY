@@ -1,10 +1,4 @@
-#Made By @MarioDevs Keep Credits If You Are Goanna Kang This Lol
 
-#And Thanks To The Creator Of Autopic This Script Was Made from Snippets From That Script
-
-#Usage .marveldp I'm Not Responsible For Any Ban caused By This
-
-#Marvel dp's by @tansique_17
 
 import requests , re , random 
 
@@ -118,4 +112,4 @@ async def main(event):
 
         os.system("rm -rf donottouch.jpg")
 
-        await asyncio.sleep(600) #Edit this to your required needs
+        await asyncio.sleep(60) #Edit this to your required needs
