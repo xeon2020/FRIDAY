@@ -14,14 +14,13 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "leobrownlee"
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     await alive.edit("**MY BOT IS RUNNING SUCCESFULLY**\n\n"
-                     f"`☞Telethon version: {version.__version__}\n`"
-                     f"`☞Python: {python_version()}\n`"
-                     "`☞Bot was modified by:` leobrownlee \n"
-                     "`☞Created by :` leobrownlee and sur_vivor\n"
+                     f"`☞Telethon version: {version.__version__}\n\n`"
+                     f"`☞Python: {python_version()}\n\n`"
+                     "`☞Bot was modified by:` leobrownlee and Sur_vivor\n\n"
                      "`☞Database Status: Databases functioning normally!\n\n`"
-                     "`☞Always with you, my master!\n`"
-                     f"`☞Owner Name`: [{DEFAULTUSER}](t.me/leobrownlee)\n"
-                     "☞[DEPLOY FRIDAY](https://github.com/leobrownlee/FRIDAY)"
+                     "`☞Always with you, my master!\n\n`"
+                     f"`☞Owner Name`: [{DEFAULTUSER}](t.me/leobrownlee)\n\n"
+                               "[DEPLOY FRIDAY](https://github.com/leobrownlee/FRIDAY)"
                     )
 
     
