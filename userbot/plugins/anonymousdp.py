@@ -49,6 +49,7 @@ async def autopic(event):
         img.save(photo)
         file = await event.client.upload_file(photo)  # pylint:disable=E0602
         try:
+            await event.client(functions.photos.DeletePhotosRequest(await event.client.get_profile_photos("me", limit=1)))
             await event.client(functions.photos.UploadProfilePhotoRequest(  # pylint:disable=E0602
                 file
             ))
