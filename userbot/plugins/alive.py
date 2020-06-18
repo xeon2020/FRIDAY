@@ -19,7 +19,7 @@ async def amireallyalive(alive):
                      "`😎Bot was modified by:` leobrownlee and Sur_vivor\n\n"
                      "`😎Database Status: Databases functioning normally!\n\n`"
                      "`😎Always with you, my master!\n\n`"
-                     f"`😎Owner Name`: [{DEFAULTUSER}](tg://user?id={})\n\n\n"
+                     f"`😎Owner Name`: {DEFAULTUSER}\n\n\n"
                      "[DEPLOY FRIDAY](https://github.com/leobrownlee/FRIDAY)"
                     )
 
