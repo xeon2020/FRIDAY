@@ -11,7 +11,7 @@ import random
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 
-@borg.on(admin_cmd(pattern="blooom ?(.*)"))
+@borg.on(admin_cmd(pattern="bloom ?(.*)"))
 async def autopic(event): 
     await event.edit("Bloom colour profile pic have been enabled") 
     downloaded_file_name = "./FRIDAY/original_pic.png"
