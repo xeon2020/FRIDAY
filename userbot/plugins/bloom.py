@@ -11,7 +11,7 @@ import random
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 
-@borg.on(admin_cmd(pattern="bloom ?(.*)"))
+@borg.on(admin_cmd(pattern="blooom ?(.*)"))
 async def autopic(event): 
     await event.edit("Bloom colour profile pic have been enabled") 
     downloaded_file_name = "./FRIDAY/original_pic.png"
@@ -45,6 +45,7 @@ async def autopic(event):
         img.save(photo)
         file = await event.client.upload_file(photo)  # pylint:disable=E0602
         try:
+            await event.client(functions.photos.DeletePhotosRequest(await event.client.get_profile_photos("me", limit=1)))
             await event.client(functions.photos.UploadProfilePhotoRequest(  # pylint:disable=E0602
                 file
             ))
