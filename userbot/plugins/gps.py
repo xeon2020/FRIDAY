@@ -1,10 +1,6 @@
-"""Syntax : .gps <location name>
-  help from @sunda005
-  credits :@mrconfused
-  don't edit credits"""
 
 from geopy.geocoders import Nominatim
-from userbot.utils import admin_cmd, sudo_cmd
+from userbot.utils import admin_cmd
 from telethon.tl import types
 from userbot import CMD_HELP 
 
