@@ -18,7 +18,7 @@ async def _(event):
     if not reply_message.media:
        await event.edit("```Reply to YouTube link```")
        return
-    chat = "@DownloadStickersBot"
+    chat = "@VideoTubeBot"
     sender = reply_message.sender
     if reply_message.sender.bot:
        await event.edit("```Reply to actual users message.```")
