@@ -40,7 +40,7 @@ async def _(event):
         os.system("rm -fr donottouch.jpg")
     except Exception as e:  # pylint:disable=C0103,W0703
         logger.warn(str(e))  # pylint:disable=E0602
-    last_name = user.first_name
+    last_name = ""
     first_name = OFFLINE_TAG
     try:
         await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
@@ -79,7 +79,7 @@ async def _(event):
         os.system("rm -fr donottouch.jpg")
     except Exception as e:  # pylint:disable=C0103,W0703
         logger.warn(str(e))  # pylint:disable=E0602
-    first_name = user.last_name
+    first_name = ONLINE
     last_name = ""
     try:
         await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
