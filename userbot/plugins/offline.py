@@ -81,7 +81,7 @@ async def _(event):
     except Exception as e:  # pylint:disable=C0103,W0703
         logger.warn(str(e))  # pylint:disable=E0602
     first_name = ONLINE_TAG
-    last_name = ""
+    last_name = user.first_name
     try:
         await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
             last_name=last_name,
