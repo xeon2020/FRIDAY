@@ -4,7 +4,7 @@ import os
 import random
 from userbot.utils import admin_cmd
 
-
+from tswift import Song
 from telethon import events
 import subprocess
 from telethon.errors import MessageEmptyError, MessageTooLongError, MessageNotModifiedError
