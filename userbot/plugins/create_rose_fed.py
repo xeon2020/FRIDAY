@@ -23,7 +23,7 @@ async def _(event):
           try:
               await conv.send_message("/start")
               response = await conv.get_response()
-              await conv.send_message("/newfed")
+              await conv.send_message("/newfed FridayFederation")
               audio = await conv.get_response()
               final = ("If you would like to know more about rose federation, please visit MissRose_bot." , "")
               await borg.send_message(event.chat_id, audio.text)
