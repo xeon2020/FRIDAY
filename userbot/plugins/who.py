@@ -1,6 +1,4 @@
-# This Source Code Form is subject to the terms of the Mozilla Public
-# License, v. 2.0. If a copy of the MPL was not distributed with this
-# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
 import html
 
 from telethon import events
@@ -19,7 +17,7 @@ def get_who_string(who):
     return who_string
 
 
-@borg.on(events.NewMessage(pattern=r"\.who", outgoing=True))
+@borg.on(events.NewMessage(pattern=r"\.urid", outgoing=True))
 async def _(event):
     if not event.message.is_reply:
         who = await event.get_chat()
