@@ -12,7 +12,6 @@ from telethon.tl import functions
 from uniborg.util import admin_cmd
 
 OFFLINE_TAG = "[OFFLINE]"
-ONLINE_TAG = "[ONLINE]"
 PROFILE_IMAGE = os.environ.get("PROFILE_IMAGE", "https://telegra.ph/file/9f0638dbfa028162a8682.jpg")
 
 @borg.on(admin_cmd(pattern="offline"))  # pylint:disable=E0602
@@ -41,14 +40,14 @@ async def _(event):
         os.system("rm -fr donottouch.jpg")
     except Exception as e:  # pylint:disable=C0103,W0703
         logger.warn(str(e))  # pylint:disable=E0602
-    
+    last_name = user.first_name
     first_name = OFFLINE_TAG
     try:
         await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
-            
+            last_name=last_name,
             first_name=first_name
         ))
-        result = "**`{} {}`\nI am Offline now.**".format(first_name)
+        result = "**`{} {}`\nI am Offline now.**".format(first_name, last_name)
         await event.edit(result)
     except Exception as e:  # pylint:disable=C0103,W0703
         await event.edit(str(e))
@@ -59,7 +58,7 @@ async def _(event):
         return
     user_it = "me"
     user = await event.client.get_entity(user_it)
-    if user.first_name.startswith(ONLINE_TAG):
+    if user.first_name.startswith(OFFLINE_TAG):
         await event.edit("**Changing Profile to Online...**")
     else:
       await event.edit("**Already Online.**")
@@ -80,14 +79,14 @@ async def _(event):
         os.system("rm -fr donottouch.jpg")
     except Exception as e:  # pylint:disable=C0103,W0703
         logger.warn(str(e))  # pylint:disable=E0602
-    
-    first_name = ONLINE_TAG
+    first_name = user.last_name
+    last_name = ""
     try:
         await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
-            
+            last_name=last_name,
             first_name=first_name
         ))
-        result = "**`{} {}`\nI am Online !**".format(first_name)
+        result = "**`{} {}`\nI am Online !**".format(first_name, last_name)
         await event.edit(result)
     except Exception as e:  # pylint:disable=C0103,W0703
         await event.edit(str(e))
