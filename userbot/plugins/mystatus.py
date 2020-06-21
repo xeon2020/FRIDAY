@@ -12,7 +12,7 @@ from telethon.tl import functions
 from uniborg.util import admin_cmd
 
 OFFLINE_TAG = "[OFFLINE]"
-ONLINE_TAG = "[ONLINE]
+ONLINE_TAG = "[ONLINE]"
 PROFILE_IMAGE = os.environ.get("PROFILE_IMAGE", "https://telegra.ph/file/9f0638dbfa028162a8682.jpg")
 
 @borg.on(admin_cmd(pattern="offline"))  # pylint:disable=E0602
