@@ -1,4 +1,4 @@
-"made br @mrconfused and @sandy1709 dont edit credits"
+
 import os
 
 import random
