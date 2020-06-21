@@ -16,7 +16,7 @@ import time
 
 
 
-@borg.on(admin_cmd(outgoing=True, pattern="songlyrics (.*)"))
+@borg.on(admin_cmd(outgoing=True, pattern="slyrics (.*)"))
 async def _(event):
     await event.edit("wi8..! I am searching your lyrics....`")
     reply_to_id = event.message.id
@@ -37,9 +37,9 @@ async def _(event):
         if song.lyrics:
             reply = song.format()
         else:
-            reply = "Couldn't find any lyrics for that song! try with artist name along with song if still doesnt work try `.glyrics`"
+            reply = "Couldn't find any lyrics for that song! try with artist name along with song if still doesnt work "
     else:
-        reply = "lyrics not found! try with artist name along with song if still doesnt work try `.glyrics`"
+        reply = "lyrics not found! try with artist name along with song if still doesnt work"
         
     if len(reply) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(reply)) as out_file:
