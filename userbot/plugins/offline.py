@@ -11,8 +11,8 @@ from telethon import events
 from telethon.tl import functions
 from uniborg.util import admin_cmd
 
-OFFLINE_TAG = "[Offline]"
-ONLINE_TAG = "[Online]"
+OFFLINE_TAG = "[OFFLINE]"
+ONLINE_TAG = "[ONLINE]"
 PROFILE_IMAGE = os.environ.get("PROFILE_IMAGE", "https://telegra.ph/file/9f0638dbfa028162a8682.jpg")
 
 @borg.on(admin_cmd(pattern="offline"))  # pylint:disable=E0602
@@ -41,11 +41,11 @@ async def _(event):
         os.system("rm -fr donottouch.jpg")
     except Exception as e:  # pylint:disable=C0103,W0703
         logger.warn(str(e))  # pylint:disable=E0602
-    last_name = user.first_name
+    
     first_name = OFFLINE_TAG
     try:
         await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
-            last_name=last_name,
+            
             first_name=first_name
         ))
         result = "**`{} {}`\nI am Offline now.**".format(first_name, last_name)
@@ -80,11 +80,11 @@ async def _(event):
         os.system("rm -fr donottouch.jpg")
     except Exception as e:  # pylint:disable=C0103,W0703
         logger.warn(str(e))  # pylint:disable=E0602
-    last_name = user.first_name
+    
     first_name = ONLINE_TAG
     try:
         await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
-            last_name=last_name,
+            
             first_name=first_name
         ))
         result = "**`{} {}`\nI am Online !**".format(first_name, last_name)
