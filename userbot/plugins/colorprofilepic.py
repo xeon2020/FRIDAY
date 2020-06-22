@@ -22,7 +22,7 @@ import random
 
 
 
-FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+FONT_FILE_TO_USE = "Fonts/digital.ttf"
 
 
 
