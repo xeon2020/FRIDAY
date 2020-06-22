@@ -6,8 +6,8 @@
 
 
 
-## Installing Heroku 
+**#click_the_photo_below_to_deploy**
 
-### The Easy Way
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/leobrownlee/FRIDAY)
 
+
+[![Deploy](https://telegra.ph/file/7cf8df5c4ab7f6ae24f37.jpg)](https://heroku.com/deploy?template=https://github.com/leobrownlee/FRIDAY)
