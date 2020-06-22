@@ -9,7 +9,7 @@ import asyncio
 import shutil 
 import random
 
-FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+FONT_FILE_TO_USE = "Fonts/digital.ttf"
 
 @borg.on(admin_cmd(pattern="bloom ?(.*)"))
 async def autopic(event): 
@@ -41,7 +41,7 @@ async def autopic(event):
         fnt = ImageFont.truetype(FONT_FILE_TO_USE, 40)
         ofnt = ImageFont.truetype(FONT_FILE_TO_USE, 150)
         drawn_text.text((200, 400), current_time, font=fnt, fill=(FR,FG,FB))
-        drawn_text.text((250, 250), "  😎", font = ofnt, fill=(FR,FG,FB))
+        drawn_text.text((250, 250), "  ", font = ofnt, fill=(FR,FG,FB))
         img.save(photo)
         file = await event.client.upload_file(photo)  # pylint:disable=E0602
         try:
