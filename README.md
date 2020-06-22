@@ -6,7 +6,7 @@
 
 
 
-**#click_the_photo_below_to_deploy**
+**#CLICK THE PHOTO BELOW TO DEPLOY**
 
 
 
