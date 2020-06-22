@@ -6,7 +6,7 @@ import traceback
 from datetime import datetime
 from selenium import webdriver
 from telethon import events
-from uniborg.util import admin_cmd
+from userbot.utils import admin_cmd
 
 
 @borg.on(admin_cmd(pattern="screenshot (.*)"))
@@ -38,7 +38,7 @@ async def _(event):
         driver.set_window_size(width + 100, height + 100)
         # Add some pixels on top of the calculated dimensions 
         # for good measure to make the scroll bars disappear
-        im_png = driver.get_screenshot_as_jpg()
+        im_png = driver.get_screenshot_as_png()
         # saves screenshot of entire page
         driver.close()
         await event.edit("Stopping Google Chrome BIN")
