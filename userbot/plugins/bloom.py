@@ -39,7 +39,7 @@ async def autopic(event):
         img = Image.open(photo)
         drawn_text = ImageDraw.Draw(img)
         fnt = ImageFont.truetype(FONT_FILE_TO_USE, 40)
-        ofnt = ImageFont.truetype(FONT_FILE_TO_USE, 150)
+        ofnt = ImageFont.truetype(FONT_FILE_TO_USE, 200)
         drawn_text.text((200, 400), current_time, font=fnt, fill=(FR,FG,FB))
         drawn_text.text((250, 250), "  ", font = ofnt, fill=(FR,FG,FB))
         img.save(photo)
