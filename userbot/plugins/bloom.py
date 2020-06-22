@@ -9,7 +9,7 @@ import asyncio
 import shutil 
 import random
 
-FONT_FILE_TO_USE = "/usr/share/fonts/truetype/ttf-dejavu/DejaVuSerifCondensed-Bold.ttf"
+FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 
 @borg.on(admin_cmd(pattern="bloom ?(.*)"))
 async def autopic(event): 
