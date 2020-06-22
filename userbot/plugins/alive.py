@@ -13,7 +13,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars 
 
 
 MOD_IMG = "https://telegra.ph/file/9b54a71ac22abd00448a5.jpg"
-mod_caption += "**SYSTEM STATUS**\n\n"
+mod_caption = "**SYSTEM STATUS**\n\n"
 mod_caption += f"`🔰Telethon version: {version.__version__}\n\n`"
 mod_caption += "`🔰Database Status: Databases functioning normally!\n\n`"
 mod_caption += f"`🔰Python: {python_version()}\n\n`"
