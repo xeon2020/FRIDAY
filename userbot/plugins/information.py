@@ -52,9 +52,9 @@ async def _(event):
 <b>👨🏿‍💻BIO</b>: {}
 <b>🌐DC ID</b>: {}
 <b>📸NO OF PSS</b> : {}
-<b>🧐IS RESTRICTED</b>: {}
+<b>🧐RESTRICTED</b>: {}
 <b>✅VERIFIED</b>: {}
-<b>🤖IS A BOT</b>: {}
+<b>🤖BOT</b>: {}
 <b>👥Groups in Common</b>: {}
 """.format(
         user_id,
