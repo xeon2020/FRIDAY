@@ -45,16 +45,16 @@ async def _(event):
         dc_id = "`Need a Profile Picture to check **this**`"
         location = str(e)
     caption = """<b>Extracted Userdata From Telegram DATABASE By Friday<b>
-<b>🔥Telegram ID</b>: <code>{}</code>
-<b>🤟Permanent Link</b>: <a href='tg://user?id={}'>Click Here</a>
+<b>🆔️Telegram ID</b>: <code>{}</code>
+<b>📎Permanent Link</b>: <a href='tg://user?id={}'>Click Here</a>
 <b>🗣️First Name</b>: <code>{}</code>
 <b>🗣️Second Name</b>: <code>{}</code>
 <b>👨🏿‍💻BIO</b>: {}
-<b>🎃DC ID</b>: {}
-<b>⚡NO OF PSS</b> : {}
-<b>🤔IS RESTRICTED</b>: {}
+<b>🌐DC ID</b>: {}
+<b>📸NO OF PSS</b> : {}
+<b>🧐IS RESTRICTED</b>: {}
 <b>✅VERIFIED</b>: {}
-<b>🙄IS A BOT</b>: {}
+<b>🤖IS A BOT</b>: {}
 <b>👥Groups in Common</b>: {}
 """.format(
         user_id,
