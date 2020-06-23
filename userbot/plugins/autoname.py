@@ -24,7 +24,7 @@ async def _(event):
         logger.info(name)
         try:
             await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
-                first_name=name
+                last_name=name
             ))
         except FloodWaitError as ex:
             logger.warning(str(e))
