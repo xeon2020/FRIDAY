@@ -86,7 +86,7 @@ async def autopic(event):
 
         fnt = ImageFont.truetype(FONT_FILE_TO_USE, 40)
 
-        ofnt = ImageFont.truetype(FONT_FILE_TO_USE, 50)
+        ofnt = ImageFont.truetype(FONT_FILE_TO_USE, 40)
 
         drawn_text.text((200, 400), current_time, font=fnt, fill=(FR,FG,FB))
 
