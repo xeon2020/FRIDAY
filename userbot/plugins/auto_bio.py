@@ -12,6 +12,7 @@ from telethon.tl import functions
 from telethon.errors import FloodWaitError
 from userbot.utils import admin_cmd
 
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "FRIDAY"
 
 DEL_TIME_OUT = 60
 
@@ -23,7 +24,7 @@ async def _(event):
     while True:
         DMY = time.strftime("%d.%m.%Y")
         HM = time.strftime("%H:%M:%S")
-        bio = f"📅 {DMY} |#CyberProGang| ⌚️ {HM}"
+        bio = f"📅{DMY} {DEFAULTUSER}⌚️ {HM}"
         logger.info(bio)
         try:
             await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
