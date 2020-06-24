@@ -1,3 +1,4 @@
+import os
 import time
 import asyncio
 import io
@@ -8,14 +9,18 @@ from userbot import ALIVE_NAME
 from userbot.utils import admin_cmd
 from userbot import CMD_HELP
 
-
+PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
+if PMPERMIT_PIC is None:
+  WARN_PIC = "https://telegra.ph/file/db92ed3d77377856ef911.mp4"
+else:
+  WARN_PIC = PMPERMIT_PIC
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**Set ALIVE_NAME in config vars in Heroku**"
 USER_BOT_WARN_ZERO = "`You were spamming my sweet master's inbox, henceforth your retarded lame ass has been blocked by my master's userbot⭕️.`\n**Now GTFO, i'm playing minecraft**"
-WARN_PIC = "https://telegra.ph/file/db92ed3d77377856ef911.mp4" 
+
 USER_BOT_NO_WARN = ("`Hello, This is AntiSpam Security Service⚠️.You have found your way here to my master,`"
                     f"{DEFAULTUSER}'s `inbox.\n"
                     "Leave your Name,Reason and 10k$ and hopefully you'll get a reply within 2 light years.`⭕️\n\n"
