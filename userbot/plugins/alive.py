@@ -7,12 +7,17 @@ from userbot.utils import admin_cmd
 from telethon import version
 from platform import python_version, uname
 
+ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
+if ALIVE_PIC is None:
+  MOD_IMG = "https://telegra.ph/file/c922dbfc6ea82e10e83a2.mp4"
+else:
+  MOD_IMG = ALIVE_PIC
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
 
 
-MOD_IMG = "https://telegra.ph/file/c922dbfc6ea82e10e83a2.mp4"
+
 mod_caption = "**MY BOT IS RUNNING SUCCESFULLY\n\n\n**"
 mod_caption += "`🔰SYSTEM STATUS\n\n`"
 mod_caption += f"`🔰Telethon version: {version.__version__}\n\n`"
