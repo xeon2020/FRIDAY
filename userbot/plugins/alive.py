@@ -10,7 +10,7 @@ from platform import python_version, uname
 
 ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
 if ALIVE_PIC is None:
-  MOD_IMG = "https://telegra.ph/file/c922dbfc6ea82e10e83a2.mp4"
+  MOD_IMG = "https://telegra.ph/file/189e8ac9f26e1fcff7e36.mp4"
 else:
   MOD_IMG = ALIVE_PIC
 
