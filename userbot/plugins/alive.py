@@ -1,4 +1,5 @@
 """Check if userbot alive or not . """
+import os
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
