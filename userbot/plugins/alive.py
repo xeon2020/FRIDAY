@@ -12,7 +12,7 @@ from platform import python_version, uname
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
 
 
-MOD_IMG = "https://telegra.ph/file/9b54a71ac22abd00448a5.jpg"
+MOD_IMG = "https://telegra.ph/file/c922dbfc6ea82e10e83a2.mp4"
 mod_caption = "**MY BOT IS RUNNING SUCCESFULLY\n\n\n**"
 mod_caption += "`🔰SYSTEM STATUS\n\n`"
 mod_caption += f"`🔰Telethon version: {version.__version__}\n\n`"
