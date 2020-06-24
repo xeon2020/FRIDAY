@@ -13,7 +13,8 @@ PREV_REPLY_MESSAGE = {}
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
 REDIRECTCHANNELS = str(REDIRECTCHANNEL) 
-USER_BOT_WARN_ZERO = "`You Were Spamming My Master's Inbox"
+USER_BOT_WARN_ZERO = "`You were spamming my sweet master's inbox, henceforth your retarded lame ass has been blocked by my master's userbot⭕️.`\n**Now GTFO, i'm playing minecraft**\n"
+WARN_PIC = "https://telegra.ph/file/db92ed3d77377856ef911.mp4" 
 USER_BOT_NO_WARN = ("`Hello ! Dear This is My Master\n"
                     "`Private Messaging Security Protocol ⚠️`\n\n"
                     "**You Have Trespassed To My Boss\n"
