@@ -28,7 +28,15 @@
       "required": false
     },
     "ALIVE_NAME": {
-      "description": "Fill your Full name or Username like @Mariodevs.",
+      "description": "Fill your Full name or Username like @masterDestroyer.",
+      "value": ""
+    },
+    "ALIVE_PIC": {
+      "description": "put here any telegraph links for alive pic.",
+      "value": ""
+    },
+    "PMPERMIT_PIC": {
+      "description": "put here any telegraph links for pmpermit custom pic.",
       "value": ""
     },
     "APP_ID": {
