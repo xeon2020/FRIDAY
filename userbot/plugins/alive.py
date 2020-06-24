@@ -1,4 +1,11 @@
-"""Check if userbot alive or not . """
+"""Check if userbot alive or not . 
+
+# thanks to @WhySooSerious
+# thanks to @Sur_vivor 
+# final editing by leobrownlee 
+
+
+"""
 import os
 import asyncio
 from telethon import events
