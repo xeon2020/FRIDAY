@@ -1,9 +1,11 @@
+
+# thanks to @WhySooSerious 
+# thanks to @Sur_vivor  
+# final editing by leobrownlee
+
+
+
 """Check if userbot alive or not . 
-
-# thanks to @WhySooSerious
-# thanks to @Sur_vivor 
-# final editing by leobrownlee 
-
 
 """
 import os
