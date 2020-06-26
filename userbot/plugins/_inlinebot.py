@@ -3,11 +3,9 @@ import asyncio
 import json
 import random
 import re
-from telethon import events, errors, custom, functions, __version__
+from telethon import events, errors, custom
 from userbot import CMD_LIST
 import io
-import sys
-
 
 if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     @tgbot.on(events.InlineQuery)  # pylint:disable=E0602
@@ -19,7 +17,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             rev_text = query[::-1]
             buttons = paginate_help(0, CMD_LIST, "helpme")
             result = builder.article(
-                "© FRIDAYUserBot Help",
+                "© FRIDAY Help",
                 text="{}\nCurrently Loaded Plugins: {}".format(
                     query, len(CMD_LIST)),
                 buttons=buttons,
@@ -38,7 +36,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             # https://t.me/TelethonChat/115200
             await event.edit(buttons=buttons)
         else:
-            reply_pop_up_alert = "Get your own userbot, don't use others\n ib @leobrownlee for learning how to get userbot!"
+            reply_pop_up_alert = "Please get your own Userbot, and don't use mine!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
 
@@ -57,7 +55,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             # https://t.me/TelethonChat/115200
             await event.edit(buttons=buttons)
         else:
-            reply_pop_up_alert = "Get your own friday , don't use others's\n ib @leobrownlee for learning how to get userbot!"
+            reply_pop_up_alert = "Please get your own Userbot, and don't use mine!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
     @tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
         data=re.compile(b"us_plugin_(.*)")
@@ -71,18 +69,19 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                 help_string += "\n"
         except:
             pass
-        if help_string is "":
+        if help_string == "":
             reply_pop_up_alert = "{} is useless".format(plugin_name)
         else:
             reply_pop_up_alert = help_string
         reply_pop_up_alert += "\n Use .unload {} to remove this plugin\n\
-            © Userbot".format(plugin_name)
+            © FRIDAY".format(plugin_name)
         try:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
-        except:
+        except: 
+            #https://github.com/Dark-Princ3/X-tra-Telegram/commit/275fd0ec26b284d042bf56de325472e088e6f364#diff-2b2df8998ff11b6c15893b2c8d5d6af3
             with io.BytesIO(str.encode(reply_pop_up_alert)) as out_file:
                 out_file.name = "{}.txt".format(plugin_name)
-                await bot.send_file(
+                await borg.send_file(
                     event.chat_id,
                     out_file,
                     force_document=True,
@@ -90,22 +89,28 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
                     caption=plugin_name
                 )
 
-
 def paginate_help(page_number, loaded_plugins, prefix):
-    number_of_rows = 10
-    number_of_cols = 2
+    number_of_rows = Config.NO_OF_BUTTONS_DISPLAYED_IN_H_ME_CMD
+    number_of_cols = Config.NO_OF_COLOUMS_DISPLAYED_IN_H_ME_CMD
     helpable_plugins = []
     for p in loaded_plugins:
         if not p.startswith("_"):
             helpable_plugins.append(p)
     helpable_plugins = sorted(helpable_plugins)
     modules = [custom.Button.inline(
-        "{} {} {}".format ("🔰", x , "🔰"),
+        "{} {} {}".format(Config.EMOJI_TO_DISPLAY_IN_HELP, x, Config.EMOJI_TO_DISPLAY_IN_HELP),
         data="us_plugin_{}".format(x))
         for x in helpable_plugins]
-    pairs = list(zip(modules[::number_of_cols], modules[1::number_of_cols]))
+    if number_of_cols == 1:
+        pairs = list(zip(modules[::number_of_cols]))
+    elif number_of_cols == 2:
+        pairs = list(zip(modules[::number_of_cols], modules[1::number_of_cols]))
+    else:
+        pairs = list(zip(modules[::number_of_cols], modules[1::number_of_cols], modules[2::number_of_cols]))
     if len(modules) % number_of_cols == 1:
         pairs.append((modules[-1],))
+    elif len(modules) % number_of_cols == 2:
+        pairs.append((modules[-2],modules[-1]))
     max_num_pages = ceil(len(pairs) / number_of_rows)
     modulo_page = page_number % max_num_pages
     if len(pairs) > number_of_rows:
