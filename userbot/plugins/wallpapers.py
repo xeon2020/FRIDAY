@@ -65,7 +65,7 @@ async def main(event):
 
         
         downloaded_file_name = "./FRIDAY/original_pic.png"
-        downloader = SmartDL(AUTOPP, downloaded_file_name, progress_bar=True)
+        downloader = SmartDL(PACK, downloaded_file_name, progress_bar=True)
         downloader.start(blocking=False)
         photo = "photo_pfp.png"
         while not downloader.isFinished():
@@ -86,7 +86,7 @@ async def main(event):
         file = await event.client.upload_file("donottouch.jpg")
         await event.client(functions.photos.DeletePhotosRequest(await event.client.get_profile_photos("me", limit=1)))
         await event.client(functions.photos.UploadProfilePhotoRequest( file))
-        os.system("rm -rf donottouch.jpg")
+        os.system("rm -rf donot.jpg")
       except:
         pass
       await asyncio.sleep(60) #Edit this to your required needs
