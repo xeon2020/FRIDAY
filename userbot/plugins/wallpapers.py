@@ -73,8 +73,8 @@ async def main(event):
             place_holder = None
     
     
-        shutil.copy(downloaded_file_name, photo)
-        im = Image.open(photo)
+        shutil.copy(downloaded_file_name, fy)
+        im = Image.open(fy)
         current_time = datetime.now().strftime("\nTime: %H:%M:%S \n\nDate: %d/%m/%y")
         img = Image.open(fy)
         drawn_text = ImageDraw.Draw(img)
