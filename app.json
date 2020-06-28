@@ -1,7 +1,7 @@
 {
   "name": "FRIDAY",
   "description": "Only For Legends",
-  "logo": "https://telegra.ph/file/2765633721f6e21a0df9e.jpg",
+  "logo": "https://telegra.ph/file/9b54a71ac22abd00448a5.jpg",
     "keywords": [
     "telegram",
     "userbot",
@@ -32,11 +32,11 @@
       "value": ""
     },
     "ALIVE_PIC": {
-      "description": "put here any telegraph links for alive pic.",
+      "description": "put here any telegraph media link for alive pic.",
       "value": ""
     },
     "PMPERMIT_PIC": {
-      "description": "put here any telegraph links for pmpermit custom pic.",
+      "description": "put here any telegraph media link for pmpermit custom pic.",
       "value": ""
     },
     "APP_ID": {
