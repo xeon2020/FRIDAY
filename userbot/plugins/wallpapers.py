@@ -68,7 +68,7 @@ async def main(event):
         downloaded_file_name = "./FRIDAY/original_pic.png"
         downloader = SmartDL(PACK, downloaded_file_name, progress_bar=True)
         downloader.start(blocking=False)
-        photo = "donottouch.jpg"
+        fy = "donottouch.jpg"
         while not downloader.isFinished():
             place_holder = None
     
@@ -76,12 +76,12 @@ async def main(event):
         shutil.copy(downloaded_file_name, photo)
         im = Image.open(photo)
         current_time = datetime.now().strftime("\nTime: %H:%M:%S \n\nDate: %d/%m/%y")
-        img = Image.open(photo)
+        img = Image.open(fy)
         drawn_text = ImageDraw.Draw(img)
         fnt = ImageFont.truetype(FONT_FILE_TO_USE, 60)
         drawn_text.text((10,40), current_time, font=fnt, fill=(255,0,0))
-        img.save(photo)
-        file = await event.client.upload_file(photo)  # pylint:disable=E0602
+        img.save(fy)
+        file = await event.client.upload_file(fy)  # pylint:disable=E0602
       try:
         
         await animepp()
