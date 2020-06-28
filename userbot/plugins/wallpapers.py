@@ -63,7 +63,8 @@ async def main(event):
     while True:
 
 
-        
+        rnd = random.randint(0, len(PACK) - 1)
+        Pack = PACK[piclink]
         downloaded_file_name = "./FRIDAY/original_pic.png"
         downloader = SmartDL(PACK, downloaded_file_name, progress_bar=True)
         downloader.start(blocking=False)
