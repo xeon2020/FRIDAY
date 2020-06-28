@@ -19,7 +19,7 @@ import random, re
 
 
 
-FONT_FILE_TO_USE = "Fonts/digital.ttf"
+FONT_FILE_TO_USE = "Fonts/Fonts/1942.ttf"
 
 #Add telegraph media links of profile pics that are to be used
 TELEGRAPH_MEDIA_LINKS = [
