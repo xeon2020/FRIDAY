@@ -59,7 +59,7 @@ async def animepp():
     drawn_text = ImageDraw.Draw(img)
     fnt = ImageFont.truetype(FONT_FILE_TO_USE, 60)
     drawn_text.text((10,40), current_time, font=fnt, fill=(255,0,0))
-    img.save(fy)
+    
     
     print(fy)
     if not os.path.exists("f.ttf"):
