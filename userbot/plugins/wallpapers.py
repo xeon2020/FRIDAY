@@ -7,6 +7,9 @@ from userbot.utils import admin_cmd
 import asyncio
 from time import sleep
 
+
+FONT_FILE_TO_USE = "Fonts/Fonts/1942.ttf"
+
 AUTOPFP_PACK = os.environ.get("AUTOPFP_PACK", None)
 if AUTOPFP_PACK is None:
   PACK = [
