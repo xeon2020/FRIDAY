@@ -53,6 +53,14 @@ async def animepp():
     f = re.compile('/\w+/full.+.jpg')
     f = f.findall(pc)
     fy = "http://getwallpapers.com"+random.choice(f)
+    
+    current_time = datetime.now().strftime("\nTime: %H:%M:%S \n\nDate: %d/%m/%y")
+    img = Image.open(fy)
+    drawn_text = ImageDraw.Draw(img)
+    fnt = ImageFont.truetype(FONT_FILE_TO_USE, 60)
+    drawn_text.text((10,40), current_time, font=fnt, fill=(255,0,0))
+    img.save(fy)
+    file = await event.client.upload_file(photo)
     print(fy)
     if not os.path.exists("f.ttf"):
         urllib.request.urlretrieve("https://github.com/rebel6969/mym/raw/master/Rebel-robot-Regular.ttf","f.ttf")
@@ -61,34 +69,13 @@ async def animepp():
 async def main(event):
     await event.edit("**uploading wallpapers \ndone check ur DP.**") 
     while True:
-
-
-        rnd = random.randint(0, len(PACK) - 1)
-        Pack = PACK[rnd]
-        downloaded_file_name = "./FRIDAY/original_pic.png"
-        downloader = SmartDL(PACK, downloaded_file_name, progress_bar=True)
-        downloader.start(blocking=False)
-        fy = "donottouch.jpg"
-        while not downloader.isFinished():
-            place_holder = None
-    
-    
-        shutil.copy(downloaded_file_name, fy)
-        im = Image.open(fy)
-        current_time = datetime.now().strftime("\nTime: %H:%M:%S \n\nDate: %d/%m/%y")
-        img = Image.open(fy)
-        drawn_text = ImageDraw.Draw(img)
-        fnt = ImageFont.truetype(FONT_FILE_TO_USE, 60)
-        drawn_text.text((10,40), current_time, font=fnt, fill=(255,0,0))
-        img.save(fy)
-        file = await event.client.upload_file(fy)  # pylint:disable=E0602
       try:
-        
         await animepp()
         file = await event.client.upload_file("donottouch.jpg")
         await event.client(functions.photos.DeletePhotosRequest(await event.client.get_profile_photos("me", limit=1)))
-        
-        os.system("rm -rf donot.jpg")
+        await event.client(functions.photos.UploadProfilePhotoRequest( file))
+        os.system("rm -rf donottouch.jpg")
       except:
         pass
       await asyncio.sleep(60) #Edit this to your required needs
+
