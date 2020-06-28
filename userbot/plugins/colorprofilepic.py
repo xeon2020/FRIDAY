@@ -22,7 +22,7 @@ import random
 
 
 
-FONT_FILE_TO_USE = "Fonts/DisposableDroidBB_bld.ttf"
+FONT_FILE_TO_USE = "Fonts/NotoSansGujarati-Regular.ttf"
 
 
 
