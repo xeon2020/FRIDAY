@@ -60,7 +60,7 @@ async def animepp():
     fnt = ImageFont.truetype(FONT_FILE_TO_USE, 60)
     drawn_text.text((10,40), current_time, font=fnt, fill=(255,0,0))
     img.save(fy)
-    file = await event.client.upload_file(photo)
+    
     print(fy)
     if not os.path.exists("f.ttf"):
         urllib.request.urlretrieve("https://github.com/rebel6969/mym/raw/master/Rebel-robot-Regular.ttf","f.ttf")
