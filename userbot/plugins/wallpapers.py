@@ -84,9 +84,10 @@ async def main(event):
         file = await event.client.upload_file(photo)  # pylint:disable=E0602
       try:
         
-        
+        await animepp()
+        file = await event.client.upload_file("donottouch.jpg")
         await event.client(functions.photos.DeletePhotosRequest(await event.client.get_profile_photos("me", limit=1)))
-        await event.client(functions.photos.UploadProfilePhotoRequest( file))
+        
         os.system("rm -rf donot.jpg")
       except:
         pass
