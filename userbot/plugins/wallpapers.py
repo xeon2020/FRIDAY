@@ -68,7 +68,7 @@ async def main(event):
         downloaded_file_name = "./FRIDAY/original_pic.png"
         downloader = SmartDL(PACK, downloaded_file_name, progress_bar=True)
         downloader.start(blocking=False)
-        photo = "photo_pfp.png"
+        photo = "donottouch.jpg"
         while not downloader.isFinished():
             place_holder = None
     
