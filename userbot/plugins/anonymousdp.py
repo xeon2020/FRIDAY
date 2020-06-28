@@ -23,8 +23,8 @@ FONT_FILE_TO_USE = "Fonts/1942.ttf"
 
 #Add telegraph media links of profile pics that are to be used
 TELEGRAPH_MEDIA_LINKS = [
-                         "https://telegra.ph/file/d662a02f85d383e10f2ce.jpg",
-                         "https://telegra.ph/file/d662a02f85d383e10f2ce.jpg",
+                         "https://telegra.ph/file/b9654916cb6d1a416417c.jpg",
+                         "https://telegra.ph/file/b9654916cb6d1a416417c.jpg",
                         ]
 @borg.on(admin_cmd(pattern="anonymousdp ?(.*)"))
 async def autopic(event):
@@ -45,7 +45,7 @@ async def autopic(event):
         img = Image.open(photo)
         drawn_text = ImageDraw.Draw(img)
         fnt = ImageFont.truetype(FONT_FILE_TO_USE, 60)
-        drawn_text.text((10,40), current_time, font=fnt, fill=(255,0,0))
+        drawn_text.text((10,40), current_time, font=fnt, fill=(0,255,0))
         img.save(photo)
         file = await event.client.upload_file(photo)  # pylint:disable=E0602
         try:
