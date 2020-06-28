@@ -22,7 +22,7 @@ import random
 
 
 
-FONT_FILE_TO_USE = "Fonts/NotoSansGujarati-Regular.ttf"
+FONT_FILE_TO_USE = "Fonts/Pixeboy-z8XGD.ttf"
 
 
 
