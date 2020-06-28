@@ -22,7 +22,7 @@ import random
 
 
 
-FONT_FILE_TO_USE = "Fonts/1942.ttf"
+FONT_FILE_TO_USE = "digital.ttf"
 
 
 
