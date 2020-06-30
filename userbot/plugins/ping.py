@@ -18,4 +18,4 @@ async def _(event):
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     uptime = get_readable_time((time.time() - StartTime))
-    await event.edit(f"🏓PONG!\nPong speed: {ms}\n🤖Userbot Uptime: {uptime}")
+    await event.edit(f"🏓PONG!\nPing speed: {ms}\n🤖Userbot Uptime: {uptime}")
