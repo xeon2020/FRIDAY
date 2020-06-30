@@ -6,7 +6,7 @@
 
 ***COMMANDS TO TAKE STRING_SESSION IN TERMUX APP**
 
-[![TERMUX](https://telegra.ph/file/a28273417dad0c9425e3d.jpg)
+[![TERMUX](https://telegra.ph/file/ea1f66800a778a8d82f12.jpg)
 
 
 
