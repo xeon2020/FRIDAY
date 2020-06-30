@@ -3,11 +3,18 @@
 
 
 
+
+***COMMANDS TO TAKE STRING_SESSION IN TERMUX APP**
+
+[![TERMUX](https://telegra.ph/file/a28273417dad0c9425e3d.jpg)
+
+
+
 **CLICK THE PHOTO BELOW TO GENERATE STRING_SESSION**
 
 
 
-[![STRING_SESSION](https://telegra.ph/file/012e02bec79baa81490ee.jpg)](https://MODDED-FRIDAY.leobrownlee.repl.run)
+[![ONLINE_TERMUX_STRING_SESSION](https://telegra.ph/file/012e02bec79baa81490ee.jpg)](https://MODDED-FRIDAY.leobrownlee.repl.run)
 
 
 **CLICK THE PHOTO BELOW TO DEPLOY**
