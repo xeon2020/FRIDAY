@@ -9,7 +9,8 @@ from datetime import datetime
 from userbot.__init__ import StartTime
 import time
 
-@command(pattern="^.ping")
+#@command(pattern="^.ping$")
+@borg.on(admin_cmd(pattern="ping$"))
 async def _(event):
     if event.fwd_from:
         return
