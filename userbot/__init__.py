@@ -8,6 +8,7 @@ from telethon.sessions import StringSession
 from telethon import TelegramClient
 
 from var import Var
+StartTime = time.time()
 
 os.system("pip install --upgrade pip")
 if Var.STRING_SESSION:
