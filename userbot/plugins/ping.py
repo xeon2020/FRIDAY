@@ -1,6 +1,7 @@
 from telethon import events
 from datetime import datetime
-
+from userbot.__init__ import StartTime
+import time
 
 @command(pattern="^.ping")
 async def _(event):
