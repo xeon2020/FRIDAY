@@ -36,9 +36,15 @@ async def _(event):
     await event.edit("Ok finding Your Awesome Song From My Database ◉‿◉")    
     bruh(str(cmd))
     l = glob.glob("*.mp3")
-    
+    loa = l[0]
     await event.edit("Sending Song From My Database To Telegram")
-    await borg.send_file()
-                
+    await borg.send_file(
+                event.chat_id,
+                loa,
+                force_document=True,
+                allow_cache=False,
+                caption=cmd,
+                reply_to=reply_to_id
+            )
     os.system("rm -rf *.mp3")
     subprocess.check_output("rm -rf *.mp3",shell=True)
