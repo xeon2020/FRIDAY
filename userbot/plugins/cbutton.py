@@ -3,7 +3,7 @@
 
 import re
 from telethon import custom
-from userbot.util import admin_cmd
+from userbot.utils import admin_cmd
 
 
 # regex obtained from: https://github.com/PaulSonOfLars/tgbot/blob/master/tg_bot/modules/helper_funcs/string_handling.py#L23
