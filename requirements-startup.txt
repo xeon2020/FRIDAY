@@ -27,6 +27,7 @@ hachoir
 heroku3
 httplib2
 humanize
+instantmusic
 lxml
 oauth2client
 psycopg2
