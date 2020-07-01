@@ -61,10 +61,6 @@
       "description": "Create a private group add rose  then type /id. PLUGIN_CHANNEL and PRIVATE_GROUP_ID both values should be same",
       "value": ""
     },
-    "PRIVATE_CHANNEL_BOT_API_ID": {
-      "description": "create a private channel and then type .get_id add that value here for create cbutton",
-      "value": ""
-    },
     "PRIVATE_GROUP_BOT_API_ID": {
       "description": "create a private channel and then type .get_id add that value here for save messages",
       "value": ""
