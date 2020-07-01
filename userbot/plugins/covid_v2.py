@@ -1,5 +1,5 @@
-# @TechnoAyanOfficial
-# Big Thanks To Spechide and ItWaze
+# @TechnoAyanBoT
+# Big Thanks To Spechide
 
 """Corona: Avaible commands: .covid <cname>
 """
@@ -23,10 +23,10 @@ async def _(event):
               await event.client.send_message(chat, "{}".format(input_str))
               response = await response 
           except YouBlockedUserError: 
-              await event.reply("```Boss! Please Unblock (@NovelCoronaBot) ```")
+              await event.reply("```Abey Thaale (@NovelCoronaBot) Ko Unblock Kar```")
               return
           if response.text.startswith("Country"):
-             await event.edit("😶**Country Not Found**😅\n\n[🔴🔴🔴🔴\n ⏩⏩ How to use ⏪⏪\n🔵🔵🔵🔵](https://t.me/FRIDAYSUPPORTOFFICIAL)")
+             await event.edit("😐**Country Not Found**😐\n\n[👇👇👇👇👇👇👇👇👇\n 👉👉How to use 👈👈\n👆👆👆👆👆👆👆👆👆](https://t.me/TechnoAyanBoT/37)")
           else: 
              await event.delete()
              await event.client.send_message(event.chat_id, response.message)
